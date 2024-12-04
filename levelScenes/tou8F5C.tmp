@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7xasfix3qphq"]
+
+[ext_resource type="Script" path="res://levelScenes/testBackground.gd" id="1_hdehu"]
+[ext_resource type="Script" path="res://generalScripts/touch_camera_controller.gd" id="1_jowch"]
+[ext_resource type="PackedScene" uid="uid://cit728ljbt4tu" path="res://assets/points/pointTest.tscn" id="2_44reu"]
+
+[node name="touchCamTesting" type="Node2D"]
+
+[node name="testBackground" type="CanvasLayer" parent="."]
+script = ExtResource("1_hdehu")
+
+[node name="TouchCamera" type="Camera2D" parent="."]
+ignore_rotation = false
+script = ExtResource("1_jowch")
+
+[node name="PointTest" parent="." instance=ExtResource("2_44reu")]
+position = Vector2(1, 0)

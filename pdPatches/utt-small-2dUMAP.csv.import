@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c07xxenjivc7c"
+
+[deps]
+
+files=["res://pdPatches/utt-small-2dUMAP.path.translation", "res://pdPatches/utt-small-2dUMAP.X.translation", "res://pdPatches/utt-small-2dUMAP.Y.translation"]
+
+source_file="res://pdPatches/utt-small-2dUMAP.csv"
+dest_files=["res://pdPatches/utt-small-2dUMAP.path.translation", "res://pdPatches/utt-small-2dUMAP.X.translation", "res://pdPatches/utt-small-2dUMAP.Y.translation"]
+
+[params]
+
+compress=true
+delimiter=0

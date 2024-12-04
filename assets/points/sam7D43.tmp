@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cspx3sxp0jsvw"]
+
+[ext_resource type="Script" path="res://assets/points/sample_node.gd" id="1_tp236"]
+[ext_resource type="Texture2D" uid="uid://bcu1sx2cymgdf" path="res://assets/img/icon.svg" id="2_wf707"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2n1ob"]
+radius = 13.0384
+
+[node name="SampleNode" type="Area2D"]
+script = ExtResource("1_tp236")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_wf707")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2n1ob")
+debug_color = Color(0.915757, 0.263649, 0.30906, 0.42)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

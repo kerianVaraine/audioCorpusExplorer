@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfusf1igw1ils"]
+
+[ext_resource type="Script" path="res://assets/midi/midi_nanopad_2.gd" id="1_t4p8t"]
+
+[node name="Midi-nanopad2" type="Node"]
+script = ExtResource("1_t4p8t")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://psfce7orbee1"]
+
+[ext_resource type="Script" path="res://levelScenes/autoload/audio_stream_player_pd.gd" id="1_7lyxp"]
+
+[sub_resource type="AudioStreamPD" id="AudioStreamPD_m5cni"]
+
+[node name="AudioStreamPlayerPD" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamPD_m5cni")
+script = ExtResource("1_7lyxp")

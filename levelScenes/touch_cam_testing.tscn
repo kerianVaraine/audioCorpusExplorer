@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7xasfix3qphq"]
+
+[ext_resource type="Script" path="res://generalScripts/touch_camera_controller.gd" id="1_jowch"]
+[ext_resource type="Script" path="res://levelScenes/touch_cam_testing.gd" id="1_v1aqd"]
+[ext_resource type="PackedScene" uid="uid://co0c6frpiogrv" path="res://assets/points/sample_node.tscn" id="2_ek8hw"]
+[ext_resource type="PackedScene" uid="uid://psfce7orbee1" path="res://levelScenes/autoload/audio_stream_player_pd.tscn" id="3_5rjla"]
+[ext_resource type="PackedScene" uid="uid://chiy6m45l6slg" path="res://assets/fingerBangers/fingerBanger.tscn" id="4_2cqbx"]
+[ext_resource type="PackedScene" uid="uid://cfusf1igw1ils" path="res://assets/midi/midi-nanopad2.tscn" id="6_v5vap"]
+
+[node name="touchCamTesting" type="Node2D"]
+modulate = Color(0, 0, 0, 1)
+script = ExtResource("1_v1aqd")
+sample_point_scene = ExtResource("2_ek8hw")
+metadata/_edit_group_ = true
+
+[node name="TouchCamera" type="Camera2D" parent="."]
+ignore_rotation = false
+script = ExtResource("1_jowch")
+fingerBanger_scene = ExtResource("4_2cqbx")
+
+[node name="AudioStreamPlayerPD" parent="." instance=ExtResource("3_5rjla")]
+
+[node name="Midi-1" parent="." instance=ExtResource("6_v5vap")]

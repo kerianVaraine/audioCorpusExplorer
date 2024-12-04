@@ -1,0 +1,35 @@
+[configuration]
+
+entry_symbol = "godotpd_init"
+compatibility_minimum = "4.3"
+reloadable = true
+
+[libraries]
+
+windows.debug.x86_64 = "res://addons/godot-pd/bin/windows/template_debug-x86_64/libgodotpd.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://addons/godot-pd/bin/windows/template_release-x86_64/libgodotpd.windows.template_release.x86_64.dll"
+linux.debug.x86_64 = "res://addons/godot-pd/bin/linux/template_debug-x86_64/libgodotpd.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "res://addons/godot-pd/bin/linux/template_release-x86_64/libgodotpd.linux.template_release.x86_64.so"
+macos.debug = "res://addons/godot-pd/bin/macos/libgodotpd.macos.template_debug.framework"
+macos.release = "res://addons/godot-pd/bin/macos/libgodotpd.macos.template_release.framework"
+
+[dependencies]
+
+windows.debug.x86_64 = {
+    "res://addons/godot-pd/bin/windows/template_debug-x86_64/libpd-multi.dll" : "",
+    "res://addons/godot-pd/bin/windows/template_debug-x86_64/libwinpthread-1.dll" : "",
+}
+windows.release.x86_64 = {
+    "res://addons/godot-pd/bin/windows/template_release-x86_64/libpd-multi.dll" : "",
+    "res://addons/godot-pd/bin/windows/template_release-x86_64/libwinpthread-1.dll" : "",
+}
+linux.debug.x86_64 = {
+    "res://addons/godot-pd/bin/linux/template_debug-x86_64/libpd-multi.so" : "",
+}
+linux.release.x86_64 = {
+    "res://addons/godot-pd/bin/linux/template_release-x86_64/libpd-multi.so" : "",
+}
+
+[icons]
+
+AudioStreamPD = "res://addons/godot-pd/icons/audio_stream_pd.svg"

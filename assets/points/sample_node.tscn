@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://co0c6frpiogrv"]
+
+[ext_resource type="Script" path="res://assets/points/sample_node.gd" id="1_gquom"]
+[ext_resource type="Shader" path="res://assets/points/sample_node.gdshader" id="2_62d7e"]
+[ext_resource type="Texture2D" uid="uid://ccsxft20rlur6" path="res://assets/img/sample_node.png" id="3_y06jd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6gbq"]
+resource_local_to_scene = true
+shader = ExtResource("2_62d7e")
+shader_parameter/speed = 2.0
+shader_parameter/amount = 0.0
+shader_parameter/new_colour = Color(0.31589, 0.608014, 0.456359, 1)
+shader_parameter/interpolation_speed = 1.0
+shader_parameter/original_colour = Vector4(1, 1, 1, 1)
+shader_parameter/interpolation_progress = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2n1ob"]
+radius = 3.0
+
+[node name="SampleNode" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_gquom")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q6gbq")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_y06jd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2n1ob")
+debug_color = Color(0.915757, 0.263649, 0.30906, 0.42)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

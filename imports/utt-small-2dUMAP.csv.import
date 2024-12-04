@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://4pmy5jjh1m7n"
+
+[deps]
+
+files=["res://imports/utt-small-2dUMAP.path.translation", "res://imports/utt-small-2dUMAP.X.translation", "res://imports/utt-small-2dUMAP.Y.translation"]
+
+source_file="res://imports/utt-small-2dUMAP.csv"
+dest_files=["res://imports/utt-small-2dUMAP.path.translation", "res://imports/utt-small-2dUMAP.X.translation", "res://imports/utt-small-2dUMAP.Y.translation"]
+
+[params]
+
+compress=true
+delimiter=0
